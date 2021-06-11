@@ -10,9 +10,23 @@
 */
 
 function characterCount(string) {
-    
+    let obj = {};
+    let strArr = string.split("");
+    for (key in strArr) {
+        let letter = strArr[key];
+        let sum = 1;
+        if (obj[letter] === undefined) {
+            obj[letter] = sum;
+        } else { obj[letter] += 1 }
+    }
+    return obj;
+    console.log(obj);
+
 }
 
+console.log(characterCount('mississippi'))
+console.log(characterCount('cat'))
+console.log(characterCount('What time is it?'))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
