@@ -14,7 +14,20 @@
 */
 
 function commonValues(obj1, obj2) {
-    
+    let newArr = [];
+
+    for (let key1 in obj1) {
+        let comp1 = obj1[key1];
+        for (let key2 in obj2) {
+            let comp2 = obj2[key2];
+            if (comp1 === comp2) {
+                newArr.push(comp1)
+            }
+        }
+    }
+
+    return newArr;
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
