@@ -13,6 +13,26 @@ All the marbles:
     console.log(allTheMarbles()) // prints 0;
 */
 
+function allTheMarbles(...obs) {
+    let totalWeight = 0;
+    for (let i = 0; i < obs.length; i++) {
+        let obj = obs[i];
+        totalWeight += obj.weight;
+    }
+
+    return totalWeight
+
+
+}
+
+const marble1 = { color: 'red', weight: 20 };
+const marble2 = { color: 'purple', weight: 100 };
+const marble3 = { color: 'blue', weight: 40 };
+
+console.log(allTheMarbles(marble1, marble2)) // prints 120;
+console.log(allTheMarbles(marble1, marble2, marble3)) // prints 160;
+console.log(allTheMarbles()) // prints 0;
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
