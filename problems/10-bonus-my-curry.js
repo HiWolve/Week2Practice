@@ -19,6 +19,14 @@
 */
 
 function myCurry(func, numArgs) {
+    function newFunc(...nums){
+        while (nums.length <= numArgs){
+            return
+        }
+
+
+    }
+    return newFunc;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
