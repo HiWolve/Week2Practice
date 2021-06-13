@@ -16,6 +16,25 @@
 // one-liner:
 // const discountPrices = (prices, discounts) => prices.map((price, i) =>  '$' + (price * (1 - discounts[i])).toFixed(2));
 
+let discountPrices = (arr1, arr2) => {
+    let newArr = [];
+    for (let i = 0; i < arr1.length; i++) {
+        let originalPrice = arr1[i];
+        let discount = 1 - arr2[i];
+        newArr.push('$' + (originalPrice * discount).toFixed(2))
+
+    }
+
+
+
+    return newArr;
+
+
+}
+
+console.log(discountPrices([10.00, 21.99, 54.49, 60.00], [0.2, 0.15, 0.3, 0.5])) // prints [ '$8.00', '$18.69', '$38.14', '$30.00' ]
+console.log(discountPrices([4.99, 12.29, 59.00], [0.15, 0.3, 0.1])) // prints [ '$4.24', '$8.60', '$53.10' ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
